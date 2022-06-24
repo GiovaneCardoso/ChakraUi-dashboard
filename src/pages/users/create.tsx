@@ -36,11 +36,8 @@ export default function UserCreate() {
     resolver: yupResolver(CreateUserFormSchema),
   });
   const { errors } = formState;
-  const handleCreateUser: SubmitHandler<CreateUserFormData> = async (
-    values
-  ) => {
+  const handleCreateUser: SubmitHandler<CreateUserFormData> = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(values);
   };
 
   return (
